@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: #000;
+    background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcHgxMDI1OTE1LWltYWdlLWpvYjY1NF8xLWwwdWJ1NTV3LmpwZw.jpg);
+    background-size: cover;
+    background-position: center;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+a:hover {
+    color: blue;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    padding:  0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+.navbar .logo a {
+    font-size: 1.5rem;
+}
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* DROPDOWN_MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 0.1rem;
+    top: 60px;
+    height: 0;
+    width: 40%;
+    background-color: #DA9131; 
+    backdrop-filter: blur (15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+    height: 180px;
+}
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zone {
+    width: 700px;
+    height: 400px;
+    margin: auto;
+}
+.zone img {
+    width: 700px;
+    height: 400px;
+}
+
+h1 {
+    padding: 20px;
+}
+h2 {
+    padding: 20px;
+}
+.zone2 p {
+    padding: 20px;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+footer img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 765px) {
+    .navbar .links {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+    .zone {
+        display: none;
+    }
+    /* .zone2 {
+        display: block;
+    } */
+    
+}
+@media (max-width: 600px) {
+    .navbar .links {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+
+}
