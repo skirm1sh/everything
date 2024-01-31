@@ -1,9 +1,15 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var liList = document.querySelectorAll("li");
 
 const inputLength = () => {
     return input.value.length;
+}
+
+const removeElement = (event) => {
+    var li = event.target;
+    ul.removeChild(li);
 }
 
 const addElement = () => {
@@ -30,3 +36,6 @@ const addAfterEnter = (event) => {
 
 button.addEventListener("click", addAfterClick);
 input.addEventListener("keydown", addAfterEnter);
+for (var i=0; i < liList.length; i++) {
+    liList[i].addEventListener("click", removeElement);
+}
